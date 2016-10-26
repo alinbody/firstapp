@@ -11,7 +11,7 @@ def index(request):
 		people = Person.objects.all()
 		return render(request, 'index.html', {'people':people})
 	else:
-		return redirect('/login/google-oauth2')
+		return redirect('/login/google-oauth2/')
 def detail(request, slug):
 	person = Person.objects.get(slug=slug)
 	return render(request, 'detail.html', {'person':person})
